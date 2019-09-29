@@ -1,0 +1,161 @@
+*{
+    font-family: 'Work Sans', sans-serif;
+
+}
+.navbar{
+    background-color: white;
+    opacity: 1;
+}
+
+#page-home{
+    height: 680px;
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+}
+.home-layer{
+    height: 680px;
+    background-color: rgba(17, 111, 235, 0.247);
+}
+.home-text{
+    margin-top: 20%;
+
+}
+.navbar-items :hover{
+    color:#207fdd !important;
+}
+.table{
+    font-size:14px;
+    color:white;
+}
+
+#why-us{
+    background-image: url("../images/choose.jpg");
+    background-size: cover;
+}
+.why-layer{
+    background-color: rgba(255, 255, 255, 0.856);
+}
+.clrx{
+    clear: both;
+    overflow: auto;
+}
+.form-app{
+    border-radius: 20px;
+    border: 2px solid rgba(226, 226, 226, 0.733);
+}
+.form-app input{
+    border-radius: 20px;
+}
+
+.nav-pills{
+    margin-left: 20%;
+}
+
+.doc-txt{
+    padding: 10px;
+    border: 1px solid rgb(212, 212, 212);
+}
+.doc-card h6{
+    color:#007bff;
+}
+.nav-link{
+    border-radius: 20px !important;
+}
+
+#comments{
+    height:435px;
+    background-image: url("../images/comment.jpg");
+    background-size: cover;
+}
+.layer{
+    background-color: rgba(255, 255, 255, 0.815);
+}
+
+.hvr-my:hover{
+    background-color: white !important;
+    color:#007bff !important;
+}
+.clrx{
+    clear: both;
+    overflow: hidden;
+}
+button{
+    border: 1px solid #207fdd !important;
+}
+
+
+.arr-top{
+    position: fixed;
+    bottom:2%;
+    right:2%;
+    z-index: 6565;
+    opacity: 0;
+}
+
+#register-home{
+    height:680px;
+    background-image: url("../images/reg1.jpg");
+    background-size: cover;
+}
+.reg-layer{
+    height:680px;
+    background-color: rgba(255, 255, 255, 0.815);
+}
+.login-screen{
+    background-color: rgba(0, 0, 0, 0.71);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 10000;
+    display: none;
+}
+
+
+.spinner {
+    width: 40px;
+    height: 40px;
+  
+    position: relative;
+    margin: 100px auto;
+  }
+  
+  .double-bounce1, .double-bounce2, .heart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+  }
+  
+  .double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  
+  @-webkit-keyframes sk-bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes sk-bounce {
+    0%, 100% { 
+      transform: scale(0.0);
+      -webkit-transform: scale(0.0);
+    } 50% { 
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+  }
+  .loading-screen{
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 15200;
+    padding-top: 220px;
+}

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Services We Offer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/animate.css">
+  <link rel="stylesheet" href="./css/hover-min.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="./fontawesome-free-5.6.0-web/css/all.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/index_style.css" />
+</head>
+
+<body>
+
+  <a href="#page-home" class="arrtp">
+    <i style="color:#207fdd" class="fas fa-chevron-circle-up fa-3x arr-top"></i>
+
+  </a>
+  <div class="login-screen">
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+          <form class="form-app form-control my-2" action="">
+            <h4 style="font-weight:bold;" class="py-4">Login Here</h4>
+            <h6 style="font-size:14px;font-weight:bold;">E-MAIL</h6>
+            <input class="form-control  my-3" placeholder="Email" type="email" name="">
+            <h6 style="font-size:14px;font-weight:bold;">PASSWORD</h6>
+            <input class="form-control  my-3" placeholder="Enter your password" type="password" name="Pass">
+            <button style="width:30%;border-radius:20px;" class="btn btn-primary ml-5 my-3" type="submit" name="">Log
+              In</button>
+            <button style="width:30%; border-radius:20px;border:none !important;" class="btn btn-danger ml-4 my-3">Register</button>
+            <h6 class="text-center">Press ESC to close the window.</h6>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <% if(id===0){%>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <a class="navbar-brand ml-5 pl-5" href="/"><img src="./images/logo.png" alt="" style="height:40px;width:150px;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px; " class="nav-link mr-3 page-home" href="/">Home
+            <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active scrollable navbar-items">
+          <a style="font-weight:bold;font-size:14px;
+            " class="nav-link mr-3" href="/about">About <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;border:1px solid #d8d8d8;" class="nav-link mr-3" href="/services">Service
+            <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3" href="/appointment">Appointmnet
+            <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3" href="/doctors">Doctors
+            <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3" href="/department">Department
+            <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3" href="/blog">Blog <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active  scrollable navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3" href="#contact">Contact <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="mr-5 ">
+          <a id="login" href="/login" style="border-radius:20px;border:none !important;" class="btn btn-danger">Log In</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <%}else{%>
+  <nav style="display: flex" class="navbar navbar-expand-lg navbar-light fixed-top">
+    <a class="navbar-brand ml-5 pl-5" href="/"><img src="./images/logo.png" alt="" style="height:40px;width:150px;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3" href="/about">About <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;border:1px solid #d8d8d8;" class="nav-link mr-3" href="/services">Service
+            <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3" href="/appointment">Appointmnet <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3" href="/doctors">Doctors <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3" href="/department">Department <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3" href="/blog">Blog <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3" href="#contact">Contact <span class="sr-only">(current)</span></a>
+        </li>
+
+        <img src="./images/doc1.png" style="height:50px;width:40px;border-radius: 50px;border:1px #a1a0a0;" alt="">
+        <li class="nav-item active navbar-items">
+          <a href="/profile" style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc8">
+            <%= data.recordset[0].first_name %>
+            <%= data.recordset[0].last_name %><span class="sr-only">(current)</span></a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+  <%}%>
+
+
+  <section id="page-home" class="   hvr-icon-hang w-100">
+    <div class="home-layer pt-5 ">
+      <div class="text-center home-text">
+        <h1 class="" style="font-weight: bold;font-size: 48px;color:white;">Service We Offer</h1>
+        <h5 class="" style="color:white;">Know about them, Because you'll need them!</h5>
+        <a href="#services" class="arr">
+          <i style="color:white" class="fas fa-angle-double-down fa-3x hvr-icon"></i>
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="services">
+
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-4  hvr-icon-buzz-out">
+          <div class="row">
+            <div class="col-md-2 ">
+              <i style="color:#f589a1" class=" fas fa-ambulance fa-3x hvr-icon"></i>
+            </div>
+            <div class="col-md-9 ml-3">
+              <h5 style="font-weight:bold;">
+                Emergency Care
+              </h5>
+              <p style="font-size:14px;color:#555">Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4  hvr-icon-buzz-out">
+          <div class="row">
+            <div class="col-md-2 ">
+              <i style="color:#e9b782" class="hvr-icon fas fa-stethoscope fa-3x"></i>
+            </div>
+            <div class="col-md-9 ml-3">
+              <h5 style="font-weight:bold;">Call Center 24/7</h5>
+              <p style="font-size:14px;color:#555">Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4  hvr-icon-buzz-out">
+          <div class="row">
+            <div class="col-md-2 ">
+              <i style="color:#a7b5f6" class="hvr-icon fas fa-headset fa-3x"></i>
+            </div>
+            <div class="col-md-9 ml-3">
+              <h5 style="font-weight:bold;">
+
+                Call Center 24/7</h5>
+              <p style="font-size:14px;color:#555">Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-4  hvr-icon-buzz-out">
+          <div class="row">
+            <div class="col-md-2 ">
+              <i style="color:#e35151" class=" hvr-icon fas fa-tint fa-3x"></i>
+            </div>
+            <div class="col-md-9 ml-3">
+              <h5 style="font-weight:bold;">
+                Blood Test</h5>
+              <p style="font-size:14px;color:#555">Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-4  hvr-icon-buzz-out">
+          <div class="row">
+            <div class="col-md-2 ">
+              <i style="color:#fe976c" class="hvr-icon fas fa-heartbeat fa-3x"></i>
+            </div>
+            <div class="col-md-9 ml-3">
+              <h5 style="font-weight:bold;">
+                Cardiac Surgery</h5>
+              <p style="font-size:14px;color:#555">Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-4  hvr-icon-buzz-out">
+          <div class="row">
+            <div class="col-md-2 ">
+              <i style="color:#e9aae1" class="hvr-icon fas fa-tooth fa-3x"></i>
+            </div>
+            <div class="col-md-9 ml-3">
+              <h5 style="font-weight:bold;">Dental Care</h5>
+              <p style="font-size:14px;color:#555">Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-4  hvr-icon-buzz-out">
+          <div class="row">
+            <div class="col-md-2 ">
+              <i style="color:#8cc6f4" class="hvr-icon fas fa-stethoscope fa-3x"></i>
+            </div>
+            <div class="col-md-9 ml-3">
+              <h5 style="font-weight:bold;">
+                Outdoor Checkup</h5>
+              <p style="font-size:14px;color:#555">Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-4  hvr-icon-buzz-out">
+          <div class="row">
+            <div class="col-md-2 ">
+              <i style="color:#9cdb70" class="hvr-icon fas fa-eye fa-3x"></i>
+            </div>
+            <div class="col-md-9 ml-3">
+              <h5 style="font-weight:bold;">
+                Ophthalmology</h5>
+              <p style="font-size:14px;color:#555">Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-4  hvr-icon-buzz-out">
+          <div class="row">
+            <div class="col-md-2 ">
+              <i style="color:#82dfb0" class="hvr-icon fas fa-heart fa-3x"></i>
+            </div>
+            <div class="col-md-9 ml-3">
+              <h5 style="font-weight:bold;">Heart disease</h5>
+              <p style="font-size:14px;color:#555">Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color:rgb(49, 49, 49)" id="contact" class=" pt-5 text-center">
+    <div style="border:1px solid white" class="container my-5 pt-3">
+      <h5 style="font-size:30px;color:white;">
+        Need a Doctor for Check-up?</h5>
+      <h1 style="font-size:38px;color:white;" class="float-left">JUST MAKE AN APPOINTMENT & YOU'RE DONE !
+      </h1>
+      <a href="/appointment" class="float-right btn btn-danger hvr-my px-4 mb-4" style="padding-bottom:10px;padding-top:10px;font-weight:bold;font-size:12px;background-color:#207fdd;border:0px;border-radius:20px">GET
+        AN APPOINTMENT</a>
+      <div class="clrx"></div>
+    </div>
+    <div>
+      <img class="mb-3" src="./images/logo.png" alt="">
+    </div>
+
+    <div class="container pb-3 px-5" style="">
+      <p style="color:white;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+        has been the.
+
+      </p>
+      <div class="ml-5 pl-5">
+
+        <i style="color:white" class="fa fa-location-arrow fa-2x float-left mr-2 ml-5 "></i>
+        <h6 style="color:white;" class="float-left mr-5">PO Box 16122 Collins Street <br>
+          West Victoria 8007 Australia
+        </h6>
+        <i style="color:white" class="fas fa-phone fa-2x float-left mx-2"></i>
+        <h6 style="color:white;" class="float-left mr-5">+880153625892</h6>
+        <i style="color:white" class="fas fa-mail-bulk fa-2x float-left mx-2"></i>
+        <h6 style="color:white;" class="float-left mr-5">bdtask@gmail.com</h6>
+
+      </div>
+      <div class="clrx"></div>
+    </div>
+
+  </section>
+
+  <section style="background-color:rgb(36, 36, 36)" id="copyright" class="py-3 text-center">
+    <h6 style="color:white;">Copyright © 2016. All rights reserved</h6>
+  </section>
+
+
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./fontawesome-free-5.6.0-web/js/all.js"></script>
+  <script src="./js/services.js"></script>
+  <script src="./js/wow.min.js"></script>
+
+
+</body>
+
+</html>

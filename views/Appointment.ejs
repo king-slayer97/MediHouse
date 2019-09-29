@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Reserve an Appointment</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/animate.css">
+  <link rel="stylesheet" href="./css/hover-min.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="./fontawesome-free-5.6.0-web/css/all.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/index_style.css" />
+</head>
+
+<body>
+
+  <a href="#page-home" class="arrtp">
+    <i style="color:#207fdd" class="fas fa-chevron-circle-up fa-3x arr-top"></i>
+  </a>
+
+
+  <% if(id===0){%>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <a class="navbar-brand ml-5 pl-5" href="/"><img src="./images/logo.png" alt="" style="height:40px;width:150px;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px; " class="nav-link mr-3 sc1" href="/">Home
+            <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active scrollable navbar-items">
+          <a style="font-weight:bold;font-size:14px;
+            " class="nav-link mr-3 sc2 " href="/about">About <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc3 page-home" href="/services">Service
+            <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;border:1px solid #d8d8d8;" class="nav-link mr-3 sc4" href="/appointment">Appointmnet
+            <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc5" href="/doctors">Doctors
+            <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc6" href="/department">Department
+            <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc7" href="/blog">Blog <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active  scrollable navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc8" href="#contact">Contact <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="mr-5 ">
+          <a id="login" href="/login" style="border-radius:20px;border:none !important;" class="btn btn-danger">Log In</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <%}else{%>
+  <nav style="display: flex" class="navbar navbar-expand-lg navbar-light fixed-top">
+    <a class="navbar-brand ml-5 pl-5" href="/"><img src="./images/logo.png" alt="" style="height:40px;width:150px;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc1" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc2" href="/about">About <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc3" href="/services">Service <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;border:1px solid #d8d8d8;" class="nav-link mr-3 sc4" href="/appointment">Appointmnet
+            <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc5" href="/doctors">Doctors <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc6" href="/department">Department <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc7" href="/blog">Blog <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc8" href="#contact">Contact <span class="sr-only">(current)</span></a>
+        </li>
+
+        <img src="./images/doc1.png" style="height:50px;width:40px;border-radius: 50px;border:1px #a1a0a0;" alt="">
+        <li class="nav-item active navbar-items">
+          <a href="/profile" style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc8">
+            <%= data.recordset[0].first_name %>
+            <%= data.recordset[0].last_name %><span class="sr-only">(current)</span></a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+  <%}%>
+
+
+  <section id="page-home" class="   hvr-icon-hang w-100">
+    <div class="home-layer pt-5 ">
+      <div class="text-center home-text">
+        <h1 class="" style="font-weight: bold;font-size: 48px;color:white;">Reserve an Appointment</h1>
+        <h5 class="" style="color:white;">Don't worry, We hate the queue just like you!</h5>
+        <a href="#why-us" class="arr">
+          <i style="color:white" class="fas fa-angle-double-down fa-3x hvr-icon"></i>
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section id="why-us" class=" ">
+    <div class="why-layer">
+
+      <div class="container pt-5 pb-4">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="">
+              <form class="form-app form-control mt-2" action="">
+                <h4 style="font-weight:bold;" class="py-4">Appointment form</h4>
+                <h6 style="font-size:14px;font-weight:bold;">NAME AND SURNAME</h6>
+                <input class="form-control  my-3" placeholder="Name" type="text" name="" id="">
+                <h6 style="font-size:14px;font-weight:bold;">E-MAIL</h6>
+                <input class="form-control  my-3" placeholder="Email" type="email" name="" id="">
+                <h6 style="font-size:14px;font-weight:bold;">PHONE NUMBER</h6>
+                <input placeholder="Phone" class="form-control  my-3" type="text" name="" id="">
+                <h6 style="font-size:14px;float: left;font-weight:bold;" class="text-left">DATE FROM</h6>
+                <H6 style="font-size:14px;float: right;font-weight:bold;" class="mr-5">DATE TO</H6>
+                <div class="clrx"></div>
+                <input style="float:left;width:40%;" placeholder="From" class="form-control  my-3" type="date" name=""
+                  id="">
+                <input style="float:right;width:40%;" placeholder="To" class="form-control  my-3" type="date" name=""
+                  id="">
+                <div class="clrx"></div>
+                <input style="width:80%;background-color: #207fdd !important;" class="btn btn-info ml-4 my-3" type="submit"
+                  name="" id="">
+              </form>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img class="img-fluid" src="./images/appointment.png" alt="">
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-2">
+                <i style="color:#a7b5f6" class="fas fa-headset fa-3x"></i>
+              </div>
+              <div class="col-md-10">
+                <h5 style="font-weight:bold;">Health Information
+                </h5>
+                <div style="height:2px;background-color:#207fdd;width:20%;" class="mb-2"></div>
+                <p style="font-size:14px;color:#555">Lorem Ipsum is simply dummy text of the printing and typesetting
+                  industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+              </div>
+              <div class="col-md-2">
+                <i style="color:#e9aae1" class="fas fa-microscope fa-3x"></i>
+              </div>
+              <div class="col-md-10">
+                <h5 style="font-weight:bold;">Medical Education
+                </h5>
+                <div style="height:2px;background-color:#207fdd;width:20%;" class="mb-2"></div>
+                <p style="font-size:14px;color:#555">Lorem Ipsum is simply dummy text of the printing and typesetting
+                  industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+              </div>
+              <div class="col-md-2">
+                <i style="color:#e35151" class="fas fa-tint fa-3x"></i>
+              </div>
+              <div class="col-md-10">
+                <h5 style="font-weight:bold;">Symptom Check
+                </h5>
+                <div style="height:2px;background-color:#207fdd;width:20%;" class="mb-2"></div>
+                <p style="font-size:14px;color:#555">Lorem Ipsum is simply dummy text of the printing and typesetting
+                  industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+              </div>
+              <div class="col-md-2">
+                <i style="color:#3b94ed" class="fas fa-user-md fa-3x"></i>
+              </div>
+              <div class="col-md-10">
+                <h5 style="font-weight:bold;">Qualified Doctors
+                </h5>
+                <div style="height:2px;background-color:#207fdd;width:20%;" class=""></div>
+                <p style="font-size:14px;color:#555" class="mb-3">Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section style="background-color:rgb(49, 49, 49)" id="contact" class=" pt-5 text-center">
+    <div style="border:1px solid white" class="container my-5 pt-3">
+      <h5 style="font-size:30px;color:white;">
+        Need a Doctor for Check-up?</h5>
+      <h1 style="font-size:38px;color:white;" class="float-left">JUST MAKE AN APPOINTMENT & YOU'RE DONE !
+      </h1>
+      <a href="/appointment" class="float-right btn btn-danger hvr-my px-4 mb-4" style="padding-bottom:10px;padding-top:10px;font-weight:bold;font-size:12px;background-color:#207fdd;border:0px;border-radius:20px">GET
+        AN APPOINTMENT</a>
+      <div class="clrx"></div>
+    </div>
+    <div>
+      <img class="mb-3" src="./images/logo.png" alt="">
+    </div>
+
+    <div class="container pb-3 px-5" style="">
+      <p style="color:white;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+        has been the.
+
+      </p>
+      <div class="ml-5 pl-5">
+
+        <i style="color:white" class="fa fa-location-arrow fa-2x float-left mr-2 ml-5 "></i>
+        <h6 style="color:white;" class="float-left mr-5">PO Box 16122 Collins Street <br>
+          West Victoria 8007 Australia
+        </h6>
+        <i style="color:white" class="fas fa-phone fa-2x float-left mx-2"></i>
+        <h6 style="color:white;" class="float-left mr-5">+880153625892</h6>
+        <i style="color:white" class="fas fa-mail-bulk fa-2x float-left mx-2"></i>
+        <h6 style="color:white;" class="float-left mr-5">bdtask@gmail.com</h6>
+
+      </div>
+      <div class="clrx"></div>
+    </div>
+
+  </section>
+
+  <section style="background-color:rgb(36, 36, 36)" id="copyright" class="py-3 text-center">
+    <h6 style="color:white;">Copyright © 2016. All rights reserved</h6>
+  </section>
+
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./fontawesome-free-5.6.0-web/js/all.js"></script>
+  <script src="./js/appointment.js"></script>
+  <script src="./js/wow.min.js"></script>
+
+
+</body>
+
+</html>

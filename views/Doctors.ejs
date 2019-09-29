@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Our Doctors</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/animate.css">
+  <link rel="stylesheet" href="./css/hover-min.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="./fontawesome-free-5.6.0-web/css/all.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/index_style.css" />
+</head>
+
+<body>
+
+  <a href="#page-home" class="arrtp">
+    <i style="color:#207fdd" class="fas fa-chevron-circle-up fa-3x arr-top"></i>
+
+  </a>
+
+
+  <% if(id===0){%>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <a class="navbar-brand ml-5 pl-5" href="/"><img src="./images/logo.png" alt="" style="height:40px;width:150px;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px; " class="nav-link mr-3 sc1 page-home" href="/">Home
+            <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active scrollable navbar-items">
+          <a style="font-weight:bold;font-size:14px;
+            " class="nav-link mr-3 sc2 " href="/about">About <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc3" href="/services">Service
+            <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc4" href="/appointment">Appointmnet
+            <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;border:1px solid #d8d8d8;" class="nav-link mr-3 sc5" href="/doctors">Doctors
+            <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc6" href="/department">Department
+            <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc7" href="/blog">Blog <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active  scrollable navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc8" href="#contact">Contact <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="mr-5 ">
+          <a id="login" href="/login" style="border-radius:20px;border:none !important;" class="btn btn-danger">Log In</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <%}else{%>
+  <nav style="display: flex" class="navbar navbar-expand-lg navbar-light fixed-top">
+    <a class="navbar-brand ml-5 pl-5" href="/"><img src="./images/logo.png" alt="" style="height:40px;width:150px;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc1" href="./">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc2" href="/about">About <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc3" href="/services">Service <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc4" href="/appointment">Appointmnet <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;border:1px solid #d8d8d8;" class="nav-link mr-3 sc5" href="/doctors">Doctors
+            <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc6" href="/department">Department <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc7" href="/blog">Blog <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc8" href="#contact">Contact <span class="sr-only">(current)</span></a>
+        </li>
+
+        <img src="./images/doc1.png" style="height:50px;width:40px;border-radius: 50px;border:1px #a1a0a0;" alt="">
+        <li class="nav-item active navbar-items">
+          <a href="/profile" style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc8">
+            <%= data.recordsets[6][0].first_name %>
+            <%= data.recordsets[6][0].last_name %><span class="sr-only">(current)</span></a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+  <%}%>
+
+  <section id="page-home" class="   hvr-icon-hang w-100">
+    <div class="home-layer pt-5 ">
+      <div class="text-center home-text">
+        <h1 class="" style="font-weight: bold;font-size: 48px;color:white;">Our Doctors</h1>
+        <h5 class="" style="color:white;">Don't worry, We won't kill you!</h5>
+        <a href="#our-doctors" class="arr">
+          <i style="color:white" class="fas fa-angle-double-down fa-3x hvr-icon"></i>
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="my-5 py-5 pt-5" id="our-doctors" style="background-color: #fafafab7">
+    <div class="container text-center pt-5">
+      <h2 style="font-weight:bold;">OUR DOCTORS</h2>
+      <h6 style="color:#555">Our department & special service</h6>
+    </div>
+    <div class="container ">
+
+      <ul class="nav nav-pills my-4 " id="pills-tab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="pills-heart-tab" data-toggle="pill" href="#pills-heart" role="tab"
+            aria-controls="pills-heart" aria-selected="true">Heart disease</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" id="pills-heapa-tab" data-toggle="pill" href="#pills-heapa" role="tab" aria-controls="pills-heapa"
+            aria-selected="false">Hepatology</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-hunti-tab" data-toggle="pill" href="#pills-hunti" role="tab" aria-controls="pills-hunti"
+            aria-selected="false">Huntington's</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-dental-tab" data-toggle="pill" href="#pills-dental" role="tab" aria-controls="pills-dental"
+            aria-selected="false">Dental</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-opth-tab" data-toggle="pill" href="#pills-opth" role="tab" aria-controls="pills-opth"
+            aria-selected="false">Ophthalmology</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-otho-tab" data-toggle="pill" href="#pills-otho" role="tab" aria-controls="pills-otho"
+            aria-selected="false">Otology</a>
+        </li>
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-heart" role="tabpanel" aria-labelledby="pills-heart-tab">
+
+          <div class="container pt-5">
+            <div class="row">
+              <% for(var i=0; i<data.recordsets[0].length;i++) {%>
+              <div class="col-md-3">
+                <div class="doc-card">
+                  <img class="img-fluid" src="./images/doc<%=i+2%>.png">
+                  <div class="doc-txt text-center MB-3">
+                    <h5>Dr.
+                      <%=data.recordsets[0][i].first_name%>
+                      <%=data.recordsets[0][i].last_name%>
+                    </h5>
+                    <h6 style="font-weight:bold;">
+                      <%=data.recordsets[0][i].spc%>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <%}%>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="pills-heapa" role="tabpanel" aria-labelledby="pills-heapa-tab">
+          <div class="container pt-5">
+            <div class="row">
+              <% for(var i=0; i<data.recordsets[1].length;i++) {%>
+              <div class="col-md-3">
+                <div class="doc-card">
+                  <img class="img-fluid" src="./images/doc<%=i+2%>.png">
+                  <div class="doc-txt text-center">
+                    <h5>Dr.
+                      <%=data.recordsets[1][i].first_name%>
+                      <%=data.recordsets[1][i].last_name%>
+                    </h5>
+                    <h6 style="font-weight:bold;">
+                      <%=data.recordsets[1][i].spc%>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <%}%>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-hunti" role="tabpanel" aria-labelledby="pills-hunti-tab">
+
+          <div class="container pt-5">
+            <div class="row">
+              <% for(var i=0; i<data.recordsets[2].length;i++) {%>
+              <div class="col-md-3">
+                <div class="doc-card">
+                  <img class="img-fluid" src="./images/doc<%=i+2%>.png" alt="">
+                  <div class="doc-txt text-center">
+                    <h5>Dr.
+                      <%=data.recordsets[2][i].first_name%>
+                      <%=data.recordsets[2][i].last_name%>
+                    </h5>
+                    <h6 style="font-weight:bold;">
+                      <%=data.recordsets[2][i].spc%>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <%}%>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="pills-dental" role="tabpanel" aria-labelledby="pills-dental-tab">
+
+          <div class="container pt-5">
+            <div class="row">
+              <% for(var i=0; i<data.recordsets[3].length;i++) {%>
+              <div class="col-md-3">
+                <div class="doc-card">
+                  <img class="img-fluid" src="./images/doc<%=i+2%>.png" alt="">
+                  <div class="doc-txt text-center">
+                    <h5>Dr.
+                      <%=data.recordsets[3][i].first_name%>
+                      <%=data.recordsets[3][i].last_name%>
+                    </h5>
+                    <h6 style="font-weight:bold;">
+                      <%=data.recordsets[3][i].spc%>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <%}%>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-opth" role="tabpanel" aria-labelledby="pills-opth-tab">
+
+          <div class="container pt-5">
+            <div class="row">
+              <% for(var i=0; i<data.recordsets[4].length;i++) {%>
+              <div class="col-md-3">
+                <div class="doc-card">
+                  <img class="img-fluid" src="./images/doc<%=i+2%>.png" alt="">
+                  <div class="doc-txt text-center">
+                    <h5>Dr.
+                      <%=data.recordsets[4][i].first_name%>
+                      <%=data.recordsets[4][i].last_name%>
+                    </h5>
+                    <h6 style="font-weight:bold;">
+                      <%=data.recordsets[4][i].spc%>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <%}%>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-otho" role="tabpanel" aria-labelledby="pills-otho-tab">
+          <div class="container pt-5">
+            <div class="row">
+              <% for(var i=0; i<data.recordsets[5].length;i++) {%>
+              <div class="col-md-3">
+                <div class="doc-card">
+                  <img class="img-fluid" src="./images/doc<%=i+2%>.png" alt="">
+                  <div class="doc-txt text-center">
+                    <h5>Dr.
+                      <%=data.recordsets[5][i].first_name%>
+                      <%=data.recordsets[5][i].last_name%>
+                    </h5>
+                    <h6 style="font-weight:bold;">
+                      <%=data.recordsets[5][i].spc%>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <%}%>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <section style="background-color:rgb(49, 49, 49)" id="contact" class=" pt-5 text-center">
+    <div style="border:1px solid white" class="container my-5 pt-3">
+      <h5 style="font-size:30px;color:white;">
+        Need a Doctor for Check-up?</h5>
+      <h1 style="font-size:38px;color:white;" class="float-left">JUST MAKE AN APPOINTMENT & YOU'RE DONE !
+      </h1>
+      <a href="/appointment" class="float-right btn btn-danger hvr-my px-4 mb-4" style="padding-bottom:10px;padding-top:10px;font-weight:bold;font-size:12px;background-color:#207fdd;border:0px;border-radius:20px">GET
+        AN APPOINTMENT</a>
+      <div class="clrx"></div>
+    </div>
+    <div>
+      <img class="mb-3" src="./images/logo.png" alt="">
+    </div>
+
+    <div class="container pb-3 px-5" style="">
+      <p style="color:white;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+        has been the.
+
+      </p>
+      <div class="ml-5 pl-5">
+
+        <i style="color:white" class="fa fa-location-arrow fa-2x float-left mr-2 ml-5 "></i>
+        <h6 style="color:white;" class="float-left mr-5">PO Box 16122 Collins Street <br>
+          West Victoria 8007 Australia
+        </h6>
+        <i style="color:white" class="fas fa-phone fa-2x float-left mx-2"></i>
+        <h6 style="color:white;" class="float-left mr-5">+880153625892</h6>
+        <i style="color:white" class="fas fa-mail-bulk fa-2x float-left mx-2"></i>
+        <h6 style="color:white;" class="float-left mr-5">bdtask@gmail.com</h6>
+
+      </div>
+      <div class="clrx"></div>
+    </div>
+
+  </section>
+
+  <section style="background-color:rgb(36, 36, 36)" id="copyright" class="py-3 text-center">
+    <h6 style="color:white;">Copyright © 2016. All rights reserved</h6>
+  </section>
+
+
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./fontawesome-free-5.6.0-web/js/all.js"></script>
+  <script src="./js/appointment.js"></script>
+  <script src="./js/wow.min.js"></script>
+
+
+</body>
+
+</html>

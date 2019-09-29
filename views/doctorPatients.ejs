@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/animate.css">
+  <link rel="stylesheet" href="../css/hover-min.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="../fontawesome-free-5.6.0-web/css/all.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/index_style.css" />
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="../js/jquery-1.12.4.js"></script>
+
+</head>
+
+<body style="height:100%;" class="">
+
+  <nav style="display: flex" class="navbar navbar-expand-lg navbar-light fixed-top">
+    <a class="navbar-brand ml-5 pl-5" href="/"><img src="../images/logo.png" alt="" style="height:40px;width:150px;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc1" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc2" href="/about">About <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc3" href="/services">Service <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc4" href="/appointment">Appointmnet <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc5" href="/doctors">Doctors <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc6" href="/department">Department <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active navbar-items">
+          <a style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc7" href="/blog">Blog <span class="sr-only">(current)</span></a>
+        </li>
+
+        <img src="../images/doc1.png" style="height:50px;width:40px;border-radius: 50px;border:1px #a1a0a0;" alt="">
+        <li class="nav-item active navbar-items">
+          <a href="/profile" style="font-weight:bold;font-size:14px;" class="nav-link mr-3 sc8">
+            <%= data.recordset[0].first_name %>
+            <%= data.recordset[0].last_name %> <span class="sr-only">(current)</span></a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+  <div class="left-side pt-5 ">
+    <div class="row pt-5 ">
+      <div style="height:100%;border-right: 1px solid #c7c7c7;" class="col-3 pt-5">
+        <div style="" class="container-fluid pl-5">
+          <img style="height:250px;" class="img-fluid" src="../images/doc1.png" alt="">
+          <div class="doc-txt text-center w-75">
+            <h5>
+              <%= data.recordsets[0][0].first_name %>
+              <%= data.recordsets[0][0].last_name %>
+            </h5>
+            <h6 style="color:#207fdd;">
+              <%= data.recordsets[0][0].spc %>
+            </h6>
+          </div>
+        </div>
+        <div style="" class="nav flex-column nav-pills w-50 pt-4 ml-5 text-center" id="v-pills-tab" role="tablist"
+          aria-orientation="vertical">
+          <a class="btn btn-primary mb-3" id="doctor" href="/profile">Info</a>
+          <button class="btn btn-primary mb-3" disabled href="/doctorPatients" id="doctorPatients">Your
+            Patients</button>
+          <form method="GET" action="/login"><button style="border:none !important;" type="submit" class="btn btn-danger mb3 px-5">Log
+              Out</button></form>
+        </div>
+      </div>
+      <%if(p===0){%>
+      <div class="col-9">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            <h1 class="text-center">Your Patients</h1>
+            <input class="form-control  my-5" onkeyup="get()" placeholder="Search for patients" type="text" name="patientSearch"
+              id="patientSearch">
+
+
+            <div class="form-control  my-5">
+              <%for(var i = 0; i < 100; i++){%>
+              <div id="patient<%=i%>" style="color:#207fdd; cursor: pointer;" onmouseover="this.style.background='#cce3f8';"
+                onmouseout="this.style.background='white';" onclick="location.href=geturl(this.id);">
+              </div>
+              <%}%>
+            </div>
+
+            <script>
+              function geturl(txt) {
+                txt = document.getElementById(txt).innerHTML;
+                var name = txt.substring(0, txt.indexOf(' '));
+                return '/profile/myPatients?p=' + name;
+              }
+            </script>
+
+            <script>
+              function get() {
+                $.ajax({
+                  type: 'GET',
+                  url: 'http://localhost:5050/profile/myPatients?s=' + document.getElementById("patientSearch").value,
+                  dataType: 'json'
+                })
+                  .done(function (data) {
+                    for (var i = 0; i < data.data.recordset.length; i++) {
+                      $('#patient' + i).html(data.data.recordset[i].first_name + ' ' + data.data.recordset[i].last_name);
+                    }
+                    for (var i = data.data.recordset.length; i < 100; i++) {
+                      $('#patient' + i).html('');
+                    }
+                  })
+              }
+            </script>
+
+
+
+            <table style="color:#207fdd;" class="table mt-5">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">PhoneNumber</th>
+                  <th scope="col">Address</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% for(var i=0; i< data.recordsets[1].length; i++) { %>
+                <tr>
+                  <th scope="row">
+                    <%= i+1 %>
+                  </th>
+                  <td>
+                    <a href="/profile/myPatients?p=<%= data.recordsets[1][i].first_name%>">
+                      <%= data.recordsets[1][i].first_name %>
+                      <%= data.recordsets[1][i].last_name %></a>
+                  </td>
+                  <td>
+                    <%= data.recordsets[1][i].phone %>
+                  </td>
+                  <td>
+                    <%= data.recordsets[1][i].address %>
+                  </td>
+                </tr>
+                <% } %>
+              </tbody>
+            </table>
+          </div>
+
+
+
+
+
+
+        </div>
+      </div>
+      <%}else if(p===1){%>
+      <div class="col-9">
+        <a href="/profile/myPatients">
+          << Back to all patients</a> <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+              <h1 class="text-center">
+                <%=data.recordsets[1][0].first_name%>
+                <%=data.recordsets[1][0].last_name%>'s History</h1>
+
+              <table style="color:#207fdd;" class="table mt-5">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">DateEnter</th>
+                    <th scope="col">DateLeave</th>
+                    <th scope="col">Disease</th>
+                    <th scope="col">Treatment</th>
+                    <th scope="col">Chronic</th>
+                    <th scope="col">Bill</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% for(var i=0; i< data.recordsets[2].length ; i++) { %>
+                  <tr>
+                    <th scope="row">
+                      <%= i+1 %>
+                    </th>
+                    <td>
+                      <%= data.recordsets[2][i].date_enter %>
+                    </td>
+                    <td>
+                      <%= data.recordsets[2][i].date_leave %>
+                    </td>
+                    <td>
+                      <%= data.recordsets[2][i].disease %>
+                    </td>
+                    <td>
+                      <%= data.recordsets[2][i].treatment %>
+                    </td>
+                    <td>
+                      <%if (data.recordsets[2][i].chronic === 1) {%>
+                      Yes
+                      <%}else{%>
+                      No
+                      <%}%>
+                    </td>
+                    <td>
+                      <%= data.recordsets[2][i].bill %>
+                    </td>
+                    <td>
+                      <form method="POST" action="/profile/edit_history?p=<%=data.recordsets[1][0].first_name%>&d=<%=data.recordsets[2][i].date_enter%>"><button
+                          type="submit" name="edit" class="btn btn-primary">Edit</button></form>
+                    </td>
+                  </tr>
+                  <% } %>
+                </tbody>
+              </table>
+            </div>
+      </div>
+      <%}else{%>
+      <div class="col-md-8">
+        <form onsubmit="return validateForm()" name="edit_history" class="form-app form-control my-2" method="POST"
+          action="/profile/edit_history?p=<%=data.recordsets[1][0].first_name%>&d=<%=data.recordsets[2][0].date_enter%>&dn=<%=data.recordsets[1][0].patient_id%>">
+          <h3 style="font-weight:bold;" class="pt-4">Edit patient history</h3>
+          <div style="height:2px;background-color:#207fdd;width:10%;" class="mb-4"></div>
+          <h6 style="font-size:14px;font-weight:bold;">DateEnter</h6>
+          <li>
+            <%=data.recordsets[2][0].date_enter%>
+          </li>
+          <div style="height:2px;background-color:white;width:10%;" class="mb-4"></div>
+          <h6 style="font-size:14px;font-weight:bold;">DateLeave</h6>
+          <li>
+            <%=data.recordsets[2][0].date_leave%>
+          </li>
+          <div style="height:2px;background-color:white;width:10%;" class="mb-4"></div>
+          <h6 style="font-size:14px;font-weight:bold;">Disease</h6>
+          <li>
+            <%=data.recordsets[2][0].disease%>
+          </li>
+          <div style="height:2px;background-color:white;width:10%;" class="mb-4"></div>
+          <h6 style="font-size:14px;font-weight:bold;">Treatment</h6>
+          <input class="form-control  my-3" value="<%=data.recordsets[2][0].treatment%>" type="text" name="Treatment">
+          <div style="height:2px;background-color:white;width:10%;" class="mb-4"></div>
+          <h6 style="font-size:14px;font-weight:bold;">Chronic</h6>
+          <li>
+            <%if (data.recordsets[2][0].chronic === 1) {%>
+            Yes
+            <%}else{%>
+            No
+            <%}%>
+          </li>
+          <div style="height:2px;background-color:white;width:10%;" class="mb-4"></div>
+          <h6 style="font-size:14px;font-weight:bold;">Bill</h6>
+          <input class="form-control  my-3" value="<%=data.recordsets[2][0].bill%>" type="text" name="Bill">
+          <div class="container ml-5 pl-5">
+            <button style="width:30%;border-radius:20px;" class="btn btn-primary ml-4 my-3" type="submit" name="">Submit</button>
+            <button type="reset" style="width:30%; border-radius:20px;border:none !important;" class="btn btn-danger ml-4 my-3">Clear</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-2">
+
+        <%}%>
+      </div>
+    </div>
+
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../fontawesome-free-5.6.0-web/js/all.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/wow.min.js"></script>
+
+
+</body>
+
+</html>
